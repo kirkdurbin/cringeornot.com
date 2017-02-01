@@ -1,0 +1,18 @@
+
+{{#if standings}}
+
+	<ul>
+
+		{{#each standings}}
+		
+		<li>
+			<div style="text-align:center"><div style="max-width:600px; margin:0 auto;"><a href="photos/{{name}}" data-featherlight="image"><img src="photos/{{name}}" alt="" /></div></a></div>
+			<p class="up">{{this.likes}}</p>
+			<p class="down">{{this.dislikes}}</p>
+		</li>
+
+		{{/each}}
+
+	</ul>
+
+{{/if}}

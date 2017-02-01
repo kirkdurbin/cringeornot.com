@@ -1,0 +1,21 @@
+
+{{#if photo}}
+
+	<div style="text-align:center"><div style="max-width:600px; margin:0 auto;"><a href="photos/{{photo.name}}" data-featherlight="image"><img src="photos/{{photo.name}}" style="max-width:100%; margin:2em 0" alt="" /></div></a></div>
+
+	<div class="button-holder">
+		<form action="./cringe" method="post">
+			<input type="hidden" name="photo" value="{{photo.name}}" />
+			<input type="submit" value="Cringe" />
+		</form>
+		<form action="./notcringe" method="post">
+			<input type="hidden" name="photo" value="{{photo.name}}" />
+			<input type="submit" value="Not Cringe" />
+		</form>
+	</div>
+
+{{else}}
+
+	<h3>You're about to OD on cringe! View the <a href="./standings">standings</a>.</h3>
+
+{{/if}}
